@@ -2,7 +2,7 @@
 
 My first personal project at GA
 
-## [Click here](onneqq.github.io) to play!
+## [Click here](https://onneqq.github.io/Tic-Tac-Toe/) to play!
 
 ## About :grin:
 - A game of Tic-Tac-Toe or Naughts & Crosses 
@@ -16,6 +16,13 @@ My first personal project at GA
 - Approach
 - Screenshots of planning
 - Flowchart of logic
+
+## Check List :white_check_mark:
+- At least one artefact of either pseudocode, flow diagram, wireframe demonstrating planning - Due by end of the day
+- A working game, built by you, hosted somewhere on the internet
+- A link to your hosted working game in the URL section of your GitHub repo
+- A git repository hosted on GitHub, with a link to your hosted game, and frequent commits dating back to the very beginning of the project
+- A readme.md file with explanations of the technologies used, the approach taken, installation instructions, unsolved problems, etc.
 
 ## Cool Tech :rocket: :rocket:
 - Languages used: HTML, CSS & JS
