@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+body {
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.game {
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+
+
