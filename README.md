@@ -2,7 +2,7 @@
 
 My first personal project at GA
 
-## [Click here](https://www.example.com) to play!
+## [Click here](onneqq.github.io) to play!
 
 ## About :grin:
 - A game of Tic-Tac-Toe or Naughts & Crosses 
