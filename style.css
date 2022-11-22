@@ -31,5 +31,19 @@ section {
     border: 2px solid black;
 }
 
+.x {
+    background-color: red;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
+
+.o {
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
+
 
 
