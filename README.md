@@ -15,7 +15,10 @@ My first personal project at GA
 
 - Approach
 - Screenshots of planning
-- Flowchart of logic
+- Flowchart of logic (Work in Progress)
+
+![Flowchart](https://i.imgur.com/LrWH7vw.png)
+
 
 ## Check List :white_check_mark:
 - At least one artefact of either pseudocode, flow diagram, wireframe demonstrating planning - Due by end of the day
