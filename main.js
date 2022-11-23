@@ -23,34 +23,41 @@ var playerXTurn = true;
 
 var allBoxes = document.querySelectorAll(".box");
 
+let playerXBoxes = []; // stores arr of Ids player has chosen
+let playerOBoxes = [];
+
 for (let i = 0; i < allBoxes.length; i++) {
     allBoxes[i].addEventListener("click", function (event) {
         var thisBox = event.target;
         if (thisBox.className == "box" && playerXTurn == true) {
+            playerXBoxes.push(i);
             thisBox.className = "x";
             playerXTurn = false;
         } else if (thisBox.className == "box" && playerXTurn == false) {
+            playerOBoxes.push(i);
             thisBox.className = "o";
             playerXTurn = true;
         }
     });
-} // working - clicking box updates class between players
+}
+// console.log(playerXBoxes);
+// working - clicking box updates class between players
 
 // win conditions
 // straight lines: 123, 456, 789, 147, 258, 369
 // diagonals 159, 357
-// maybe a function?
 
-var winOne = document.querySelectorAll("#one, #two, #three");
-var winTwo = document.querySelectorAll("#four, #five, #six");
-var winThree = document.querySelectorAll("#seven, #eight, #nine");
-var winFour = document.querySelectorAll("#one, #four, #seven");
-var winFive = document.querySelectorAll("#two, #five, #eight");
-var winSix = document.querySelectorAll("#three, #six, #nine");
-var winSeven = document.querySelectorAll("#one, #five, #nine");
-var winEight = document.querySelectorAll("#three, #six, #nine");
+var winOne = [0, 1, 2];
+// playerXBoxes => ['one', 'two', 'three', 'seven', 'nine']
+var winTwo = [3, 4, 5];
+var winThree = [6, 7, 8];
+var winFour = [0, 3, 6];
+var winFive = [1, 4, 7];
+var winSix = [2, 5, 8];
+var winSeven = [0, 4, 8];
+var winEight = [2, 4, 6];
 
-var winCond = [
+var allWins = [
     winOne,
     winTwo,
     winThree,
@@ -59,13 +66,8 @@ var winCond = [
     winSix,
     winSeven,
     winEight,
-]; // winOne => NodeList(3)
-// https://stackoverflow.com/questions/12330086/how-to-loop-through-selected-elements-with-document-queryselectorall
+];
 
-var winCondList = document.querySelectorAll(".box"); // list of nodes
-var winCondArray = [...winCondList]; // turns node list into array
-winCondArray.forEach((div) => {
-    // do something with each div
-});
+// allWins = [[0, 1, 2], [3, 4, 5]...]
 
-// need to store player turns in arr to check vs loop above
+// reset button will reset the player choice arr and the board - stores winner in variable
