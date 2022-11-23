@@ -83,6 +83,7 @@ var playerOneScore = 0;
 var playerTwoScore = 0;
 var player1 = document.querySelector("#player1");
 var player2 = document.querySelector("#player2");
+var winMessage = document.querySelector("h2");
 
 function checkWin() {
     // allows us to check win condition below in the event listener above
@@ -102,6 +103,7 @@ function checkWin() {
                 player1.textContent = `Player 1: ${playerOneScore}`;
                 gameRunning = false; // cant click on boxs again until 'play again button selected'
                 console.log("Player X Wins"); // *** update this to do something
+                winMessage.innerText = "Mario Wins!!!!";
             }
         }
     } // repeating for other player
@@ -117,7 +119,7 @@ function checkWin() {
                 playerTwoScore++;
                 player2.textContent = `Player 2: ${playerTwoScore}`;
                 gameRunning = false;
-                console.log("Player O Wins");
+                winMessage.innerText = "Bowser Wins!!!!";
             }
         }
     }
@@ -153,4 +155,5 @@ resetScores.addEventListener("click", function (event) {
     playerTwoScore = 0;
     player2.textContent = `Player 2: ${playerTwoScore}`;
     player1.textContent = `Player 1: ${playerOneScore}`;
+    playerXTurn = true;
 }); // resets everything without reloading the page if user clicks Reset Scores
