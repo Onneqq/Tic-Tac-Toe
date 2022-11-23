@@ -79,8 +79,10 @@ var allWins = [
 // includes(searchElement, fromIndex)
 // duplicate for playerOBoxes - or add
 
-playerOneScore = 0;
-playerTwoScore = 0;
+var playerOneScore = 0;
+var playerTwoScore = 0;
+var player1 = document.querySelector("#player1");
+var player2 = document.querySelector("#player2");
 
 function checkWin() {
     // allows us to check win condition below in the event listener above
@@ -97,6 +99,7 @@ function checkWin() {
             if (won) {
                 // if win condition is met, run the following:
                 playerOneScore++;
+                player1.textContent = `Player 1: ${playerOneScore}`;
                 gameRunning = false; // cant click on boxs again until 'play again button selected'
                 console.log("Player X Wins"); // *** update this to do something
             }
@@ -112,12 +115,13 @@ function checkWin() {
             }
             if (won) {
                 playerTwoScore++;
+                player2.textContent = `Player 2: ${playerTwoScore}`;
                 gameRunning = false;
                 console.log("Player O Wins");
             }
         }
     }
-    if (playerXBoxes.length >= 5) {
+    if (playerXBoxes.length >= 5 || playerOBoxes.length >= 5) {
         gameRunning = false;
         console.log("Draw");
     }
@@ -128,7 +132,6 @@ var playAgain = document.querySelector(".playAgain");
 
 playAgain.addEventListener("click", function (event) {
     for (let i = 0; i < allBoxes.length; i++) {
-        console.log(allBoxes[i].className);
         allBoxes[i].className = "box";
     }
     gameRunning = true;
@@ -137,3 +140,17 @@ playAgain.addEventListener("click", function (event) {
 });
 
 // reset button will reset the player choice arr and the board - stores winner in variable
+
+var resetScores = document.querySelector(".resetScores");
+resetScores.addEventListener("click", function (event) {
+    for (let i = 0; i < allBoxes.length; i++) {
+        allBoxes[i].className = "box";
+    }
+    gameRunning = true;
+    playerXBoxes = [];
+    playerOBoxes = [];
+    playerOneScore = 0;
+    playerTwoScore = 0;
+    player2.textContent = `Player 2: ${playerTwoScore}`;
+    player1.textContent = `Player 1: ${playerOneScore}`;
+}); // resets everything without reloading the page if user clicks Reset Scores

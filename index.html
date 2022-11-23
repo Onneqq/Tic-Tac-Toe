@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
         <link rel="stylesheet" href="style.css" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+        </style>
     </head>
     <body>
         <header>
@@ -32,10 +35,22 @@
         </main>
         <footer>
             <h1>Player Scores</h1>
-            <p>Player 1:</p>
-            <p class="score" id="player1"></p>
-            <p>Player 2:</p>
-            <p class="score" id="player2"></p>
+
+            <p class="score" id="player1">Player 1: 0</p>
+
+            <p class="score" id="player2">Player 2: 0</p>
+
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Player 1 Starts!</li>
+                <li>
+                    After each game, if you want to continue, click Play Again
+                    and your score will be tracked!
+                </li>
+                <li>Players will take turns going first</li>
+                <li>Click Reset Scores to revert scores to 0</li>
+            </ul>
+
             <button class="playAgain">Play Again!</button>
             <button class="resetScores">Reset Scores</button>
         </footer>
