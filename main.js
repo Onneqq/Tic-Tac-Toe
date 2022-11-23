@@ -20,6 +20,7 @@
 // Clicking a Box
 
 var playerXTurn = true;
+var gameRunning = true;
 
 var allBoxes = document.querySelectorAll(".box");
 
@@ -28,15 +29,18 @@ let playerOBoxes = [];
 
 for (let i = 0; i < allBoxes.length; i++) {
     allBoxes[i].addEventListener("click", function (event) {
-        var thisBox = event.target;
-        if (thisBox.className == "box" && playerXTurn == true) {
-            playerXBoxes.push(i);
-            thisBox.className = "x";
-            playerXTurn = false;
-        } else if (thisBox.className == "box" && playerXTurn == false) {
-            playerOBoxes.push(i);
-            thisBox.className = "o";
-            playerXTurn = true;
+        if (gameRunning) {
+            var thisBox = event.target;
+            if (thisBox.className == "box" && playerXTurn == true) {
+                playerXBoxes.push(i);
+                thisBox.className = "x";
+                playerXTurn = false;
+            } else if (thisBox.className == "box" && playerXTurn == false) {
+                playerOBoxes.push(i);
+                thisBox.className = "o";
+                playerXTurn = true;
+            }
+            checkWin();
         }
     });
 }
@@ -69,5 +73,67 @@ var allWins = [
 ];
 
 // allWins = [[0, 1, 2], [3, 4, 5]...]
+// checking wins
+// loop through playerXBoxes
+// if playerXBoxes includes any wincondition (may need a 2d loop) => player wins
+// includes(searchElement, fromIndex)
+// duplicate for playerOBoxes - or add
+
+playerOneScore = 0;
+playerTwoScore = 0;
+
+function checkWin() {
+    // allows us to check win condition below in the event listener above
+    if (playerXBoxes.length >= 3) {
+        // min length for a win
+        for (let i = 0; i < allWins.length; i++) {
+            let won = true;
+            for (let j = 0; j < allWins[i].length; j++) {
+                if (!playerXBoxes.includes(allWins[i][j])) {
+                    // check if playerchoices are missing any of the index's from the win conditions
+                    won = false;
+                }
+            }
+            if (won) {
+                // if win condition is met, run the following:
+                playerOneScore++;
+                gameRunning = false; // cant click on boxs again until 'play again button selected'
+                console.log("Player X Wins"); // *** update this to do something
+            }
+        }
+    } // repeating for other player
+    if (playerOBoxes.length >= 3) {
+        for (let i = 0; i < allWins.length; i++) {
+            let won = true;
+            for (let j = 0; j < allWins[i].length; j++) {
+                if (!playerOBoxes.includes(allWins[i][j])) {
+                    won = false;
+                }
+            }
+            if (won) {
+                playerTwoScore++;
+                gameRunning = false;
+                console.log("Player O Wins");
+            }
+        }
+    }
+    if (playerXBoxes.length >= 5) {
+        gameRunning = false;
+        console.log("Draw");
+    }
+}
+
+// play agin
+var playAgain = document.querySelector(".playAgain");
+
+playAgain.addEventListener("click", function (event) {
+    for (let i = 0; i < allBoxes.length; i++) {
+        console.log(allBoxes[i].className);
+        allBoxes[i].className = "box";
+    }
+    gameRunning = true;
+    playerXBoxes = [];
+    playerOBoxes = [];
+});
 
 // reset button will reset the player choice arr and the board - stores winner in variable
