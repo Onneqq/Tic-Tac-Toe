@@ -14,7 +14,8 @@ My first personal project at GA
 ## Planning :construction_worker:
 
 - Approach: 
-- Screenshots of planning
+- Day 1: Complete basic HTML and CSS structure & JS code needed to meet minimum requirements.
+- Day 2: Add CSS Keyframes and other additional styling. If there's time, add sound effects to the game. Fix any remaining bugs. Will finish up revising this README.md.
 - Flowchart of logic (Work in Progress)
 
 ![Flowchart](https://i.imgur.com/LrWH7vw.png)
@@ -36,6 +37,7 @@ My first personal project at GA
 - Need to figure out margins/border of HTML/body - background image is causing a scroll wheel to appear when I try apply the image to the entire screen using 100vh/100vw.
 - Draw condition causing game to end early.
 - Need reset button to set player 1 as starting player.
+- Scaling issue, smaller screens don't work currently. 
 
 ## Lessons Learnt :bulb: :bulb:
 - Dabbled with some Mermaid flow chart creation!
