@@ -96,7 +96,7 @@ section {
 }
 
 h1 {
-    margin-top: 50px;
+    margin-top: 25px;
     font-size: 2rem;
 }
 
@@ -109,7 +109,7 @@ h2 {
 }
 
 ul {
-    padding-bottom: 30px;
+    padding-bottom: 10px;
     padding-top: 10px;
 }
 
@@ -182,21 +182,67 @@ button:hover  {
 
 
 /* Mobile Devices */
-@media (max-width: 480px) {
+@media (max-width: 481px) {
     footer {
         font-size: 0.5rem;
     }
+
+    h1 {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    button {
+        height: 25px;
+        width: 50px;
+        font-size: 0.38rem;
+    }
+
+    button:hover  {
+        height: 25px;
+        width: 50px;
+        font-family: 'Press Start 2P', cursive;
+        border-radius: 10px;
+        border: 6px solid white;
+        font-size: 0.38rem;
+    }
+
     .o, .x, .box {
-        height: 100px;
-        width: 100px;
+        height: 75px;
+        width: 75px;
     }
 }
         
 /* Low resolution Tablets and iPads */
 @media (min-width: 481px) and (max-width: 767px) {
     footer {
-        font-size: 0.7rem;
+        font-size: 0.5rem;
     }
+
+    h1 {
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 0.9em;
+    }
+
+    button {
+        height: 50px;
+        width: 100px;
+    }
+
+    button:hover  {
+        height: 50px;
+        width: 100px;
+        font-family: 'Press Start 2P', cursive;
+        border-radius: 10px;
+        border: 6px solid white;
+    }
+
     .o, .x, .box {
         height: 100px;
         width: 100px;
@@ -205,34 +251,135 @@ button:hover  {
         
 /* Tablets iPads (Portrait) */
 @media (min-width: 768px) and (max-width: 1024px){
+
     footer {
+        font-size: 0.6rem;
+    }
+
+    h1 {
         font-size: 0.9rem;
     }
+
+    h2 {
+        font-size: 0.9rem;
+    }
+
+    button {
+        height: 50px;
+        width: 100px;
+    }
+
+    button:hover  {
+        height: 50px;
+        width: 100px;
+        font-family: 'Press Start 2P', cursive;
+        border-radius: 10px;
+        border: 6px solid white;
+    }
+
     .o, .x, .box {
-        height: 150px;
-        width: 150px;
+        height: 100px;
+        width: 100px;
     }
 }
     
 /* Laptops etc */
 @media (min-width: 1025px) and (max-width: 1280px){
     footer {
-        font-size: 1.2rem;
+        font-size: 0.6rem;
     }
+
+    h1 {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+    }
+
+    button {
+        height: 50px;
+        width: 100px;
+    }
+
+    button:hover  {
+        height: 50px;
+        width: 100px;
+        font-family: 'Press Start 2P', cursive;
+        border-radius: 10px;
+        border: 6px solid white;
+    }
+
     .o, .x, .box {
-        height: 150px;
-        width: 150px;
+        height: 100px;
+        width: 100px;
     }
 }
     
-/* Big boi Monitors */
-@media (min-width: 1281px) {
+
+
+/* Monitors */
+@media (min-width: 1281px) and (max-width: 1600px) {
     footer {
-        font-size: 1.4rem;
+        font-size: 0.6rem;
     }
+
+    h1 {
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 0.9rem;
+    }
+
+    button {
+        height: 50px;
+        width: 100px;
+    }
+
+    button:hover  {
+        height: 50px;
+        width: 100px;
+        font-family: 'Press Start 2P', cursive;
+        border-radius: 10px;
+        border: 6px solid white;
+    }
+
+    .o, .x, .box {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+/* 1440p */
+@media (min-width: 1600px) {
+    footer {
+        font-size: 1.3rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        height: 80px;
+        width: 160px;
+    }
+
+    button:hover  {
+        height: 80px;
+        width: 160px;
+        font-family: 'Press Start 2P', cursive;
+        border-radius: 10px;
+        border: 6px solid white;
+    }
+
     .o, .x, .box {
         height: 200px;
         width: 200px;
     }
 }
-
