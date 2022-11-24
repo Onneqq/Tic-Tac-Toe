@@ -9,7 +9,9 @@ My first personal project at GA
 - Using various skills learnt in the first few weeks at GA! 
 - Click the link above and start playing!
 
-- Add Screen Shots later
+- Desktop vs Mobile Screen Shots:
+
+<img src="https://i.imgur.com/QALzDLZ.png" alt="mobile" width="200"/> <img src="https://i.imgur.com/zORXhMV.png" alt="desktop" width="696"/>
 
 ## Planning :construction_worker:
 
@@ -18,7 +20,7 @@ My first personal project at GA
 - Day 2: Add CSS Keyframes and other additional styling. If there's time, add sound effects to the game. Fix any remaining bugs. Will finish up revising this README.md.
 - Flowchart of logic (Work in Progress)
 
-![Flowchart](https://i.imgur.com/LrWH7vw.png)
+![Flowchart](https://i.imgur.com/xr3Jtsu.png)
 
 
 ## Check List :white_check_mark:
@@ -43,8 +45,9 @@ My first personal project at GA
 - Dabbled with some Mermaid flow chart creation!
 - Complete the structure of HTML/CSS first, helps to keep things simple.
 - Plan, plan and more planning - breaking down each step into chunks of code helped a lot.
+- Learnt the hard way about mobile first, using Flex to create a 3x3 made it difficult to scale later on. It also prevented me from adding certain CSS transitions/effects to the game itself as the scaling became too complex. 
 
 ## Future Features :gem:
-- Custom styling/animations - want to use a Mario theme
-- Add audio when user selection is made
+- Custom styling/animations - want to use a Mario theme :white_check_mark:
+- Add audio :white_check_mark:
 - Win animation of some kind
