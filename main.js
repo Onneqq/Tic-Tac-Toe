@@ -183,7 +183,7 @@ resetScores.addEventListener("click", function (event) {
     playerOBoxes = [];
     playerOneScore = 0;
     playerTwoScore = 0;
-    player2.textContent = `Bowser: ${playerTwoScore}`;
+    player2.textContent = `Bowsers: ${playerTwoScore}`;
     player1.textContent = `Mario: ${playerOneScore}`;
     winMessage.innerText = "Player 1 = Mario | Player 2 = Bowser";
     playerXTurn = true;

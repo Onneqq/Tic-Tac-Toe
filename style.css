@@ -11,7 +11,7 @@ html {
     background-image: url(./Images/supermariobackground.jpg); 
     background-size: auto 100%; 
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat-x;
     /* overflow-x: hidden; */
 }
 
@@ -86,7 +86,6 @@ section {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* border: 2px solid black; */
 }
 
 .o {
@@ -94,7 +93,6 @@ section {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    /* border: 2px solid black; */
 }
 
 h1 {
