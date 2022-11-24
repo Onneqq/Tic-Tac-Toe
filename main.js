@@ -125,7 +125,7 @@ function checkWin() {
     }
     if (playerXBoxes.length >= 5 || playerOBoxes.length >= 5) {
         gameRunning = false;
-        console.log("Draw");
+        winMessage.innerText = "Draw!!!";
     }
 }
 
