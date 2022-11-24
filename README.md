@@ -51,3 +51,4 @@ My first personal project at GA
 - Custom styling/animations - want to use a Mario theme :white_check_mark:
 - Add audio :white_check_mark:
 - Win animation of some kind
+- Remake with grid structure and set more hover transitions/better overall layout
