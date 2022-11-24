@@ -30,6 +30,8 @@ const music = new Audio("Audio/05 Super Mario 64 Main Theme.mp3");
 music.volume = 0.2;
 const marioDie = new Audio("Audio/mario-die.wav");
 marioDie.volume = 0.3;
+const hereWeGo = new Audio("Audio/Here We Go Mario Sound Effect.mp3");
+hereWeGo.volume = 0.3;
 // Clicking a Box
 
 var playerXTurn = true;
@@ -163,6 +165,7 @@ playAgain.addEventListener("click", function (event) {
     for (let i = 0; i < allBoxes.length; i++) {
         allBoxes[i].className = "box";
     }
+    hereWeGo.play();
     gameRunning = true;
     playerXBoxes = [];
     playerOBoxes = [];
@@ -180,8 +183,9 @@ resetScores.addEventListener("click", function (event) {
     playerOBoxes = [];
     playerOneScore = 0;
     playerTwoScore = 0;
-    player2.textContent = `Player 2: ${playerTwoScore}`;
-    player1.textContent = `Player 1: ${playerOneScore}`;
+    player2.textContent = `Bowser: ${playerTwoScore}`;
+    player1.textContent = `Mario: ${playerOneScore}`;
+    winMessage.innerText = "Player 1 = Mario | Player 2 = Bowser";
     playerXTurn = true;
     gameOver.play();
 }); // resets everything without reloading the page if user clicks Reset Scores
