@@ -51,7 +51,9 @@ section {
 .box {
     height: 100px;
     width: 100px;
+    transition: transform 1s;
 }
+
 #top {
     border-bottom: 1.5px solid black;
 }
@@ -124,6 +126,15 @@ button {
     font-family: 'Press Start 2P', cursive;
     border-radius: 10px;
     border: 3px solid black;
+    transition: transform 1s;
+}
+
+button:hover  {
+    height: 100px;
+    width: 200px;
+    font-family: 'Press Start 2P', cursive;
+    border-radius: 10px;
+    border: 6px solid white;
 }
 
 /* Key Frames/Animations */
