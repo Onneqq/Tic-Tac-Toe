@@ -11,7 +11,7 @@ My first personal project at GA
 
 - Desktop vs Mobile Screen Shots:
 
-<img src="https://i.imgur.com/QALzDLZ.png" alt="mobile" width="200"/> <img src="https://i.imgur.com/zORXhMV.png" alt="desktop" width="669"/>
+<img src="https://i.imgur.com/QALzDLZ.png" alt="mobile" width="180"/> <img src="https://i.imgur.com/zORXhMV.png" alt="desktop" width="649"/>
 
 ## Planning :construction_worker:
 
