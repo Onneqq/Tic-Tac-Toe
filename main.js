@@ -27,7 +27,7 @@ soLongBowswer.volume = 0.3;
 const gameOver = new Audio("Audio/sm64_mario_game_over.wav");
 gameOver.volume = 0.3;
 const music = new Audio("Audio/05 Super Mario 64 Main Theme.mp3");
-music.volume = 0.3;
+music.volume = 0.2;
 const marioDie = new Audio("Audio/mario-die.wav");
 marioDie.volume = 0.3;
 // Clicking a Box
@@ -185,3 +185,15 @@ resetScores.addEventListener("click", function (event) {
     playerXTurn = true;
     gameOver.play();
 }); // resets everything without reloading the page if user clicks Reset Scores
+
+//Background music buttons
+
+var playButton = document.querySelector("#play");
+var pauseButton = document.querySelector("#pause");
+
+playButton.addEventListener("click", function (event) {
+    music.play();
+});
+pauseButton.addEventListener("click", function (event) {
+    music.pause();
+});
