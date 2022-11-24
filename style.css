@@ -175,7 +175,7 @@ button:hover  {
     }
 }
     
-/* Laptops and Desktops */
+/* Laptops etc */
 @media (min-width: 1025px) and (max-width: 1280px){
     footer {
         font-size: 1.2rem;

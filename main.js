@@ -17,6 +17,19 @@
 // add a theme - maybe mario or something
 // look up how to add audio
 
+// Audio:
+const yahoo = new Audio("Audio/sm64_mario_yahoo.wav");
+yahoo.volume = 0.2;
+const stomp = new Audio("Audio/sm64_stomp.wav");
+stomp.volume = 0.2;
+const soLongBowswer = new Audio("Audio/sm64_mario_so_long_bowser.wav");
+soLongBowswer.volume = 0.3;
+const gameOver = new Audio("Audio/sm64_mario_game_over.wav");
+gameOver.volume = 0.3;
+const music = new Audio("Audio/05 Super Mario 64 Main Theme.mp3");
+music.volume = 0.3;
+const marioDie = new Audio("Audio/mario-die.wav");
+marioDie.volume = 0.3;
 // Clicking a Box
 
 var playerXTurn = true;
@@ -34,10 +47,12 @@ for (let i = 0; i < allBoxes.length; i++) {
             if (thisBox.className == "box" && playerXTurn == true) {
                 playerXBoxes.push(i);
                 thisBox.className = "x";
+                yahoo.play();
                 playerXTurn = false;
             } else if (thisBox.className == "box" && playerXTurn == false) {
                 playerOBoxes.push(i);
                 thisBox.className = "o";
+                stomp.play();
                 playerXTurn = true;
             }
             checkWin();
@@ -100,10 +115,18 @@ function checkWin() {
             if (won) {
                 // if win condition is met, run the following:
                 playerOneScore++;
-                player1.textContent = `Player 1: ${playerOneScore}`;
+                player1.textContent = `Mario: ${playerOneScore}`;
                 gameRunning = false; // cant click on boxs again until 'play again button selected'
                 console.log("Player X Wins"); // *** update this to do something
                 winMessage.innerText = "Mario Wins!!!!";
+                soLongBowswer.play();
+            } else if (
+                playerXBoxes.length == 5 &&
+                playerOBoxes.length == 4 &&
+                !won
+            ) {
+                gameRunning = false;
+                winMessage.innerText = "Draw!!!";
             }
         }
     } // repeating for other player
@@ -117,15 +140,19 @@ function checkWin() {
             }
             if (won) {
                 playerTwoScore++;
-                player2.textContent = `Player 2: ${playerTwoScore}`;
+                player2.textContent = `Bowser: ${playerTwoScore}`;
                 gameRunning = false;
                 winMessage.innerText = "Bowser Wins!!!!";
+                marioDie.play();
+            } else if (
+                playerXBoxes.length == 4 &&
+                playerOBoxes.length == 5 &&
+                !won
+            ) {
+                gameRunning = false;
+                winMessage.innerText = "Draw!!!";
             }
         }
-    }
-    if (playerXBoxes.length >= 5 || playerOBoxes.length >= 5) {
-        gameRunning = false;
-        winMessage.innerText = "Draw!!!";
     }
 }
 
@@ -156,4 +183,5 @@ resetScores.addEventListener("click", function (event) {
     player2.textContent = `Player 2: ${playerTwoScore}`;
     player1.textContent = `Player 1: ${playerOneScore}`;
     playerXTurn = true;
+    gameOver.play();
 }); // resets everything without reloading the page if user clicks Reset Scores
