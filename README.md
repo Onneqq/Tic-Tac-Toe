@@ -34,10 +34,10 @@ My first personal project at GA
 - Any cool solutions to problems found
 
 ## A Bugs Life :ant: :bug: :beetle:
-- Need to figure out margins/border of HTML/body - background image is causing a scroll wheel to appear when I try apply the image to the entire screen using 100vh/100vw.
-- Draw condition causing game to end early.
-- Need reset button to set player 1 as starting player.
-- Scaling issue, smaller screens don't work currently. 
+- Need to figure out margins/border of HTML/body - background image is causing a scroll wheel to appear when I try apply the image to the entire screen using 100vh/100vw. - Fixed :white_check_mark:
+- Draw condition causing game to end early. - Fixed :white_check_mark:
+- Need reset button to set player 1 as starting player. Fixed :white_check_mark:
+- Scaling issue, smaller screens don't work currently. - Fixed :white_check_mark:
 
 ## Lessons Learnt :bulb: :bulb:
 - Dabbled with some Mermaid flow chart creation!
